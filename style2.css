@@ -1,0 +1,243 @@
+@import url( 'https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,800&display=swap');
+
+*{
+margin: 0; /* definir taille sur les 4 cotes */
+padding: 0;/*generate space */
+box-sizing: border-box;
+scroll-behavior: smooth ;
+font-family: 'Jost', sans-serif;
+list-style: none;
+text-decoration: none;
+
+}
+h1{
+
+font-size:50px;
+line-height: 64px;
+color: #1a1a1a;
+
+}
+h2{
+font-size:46px;
+line-height: 54px;
+color: #1a1a1a;
+
+
+}
+h4{
+    font-size:20px;
+  
+    color: #1a1a1a;
+    
+}
+h6{
+    font-weight:700px;
+    font-size:12px;
+  
+}
+p {
+    font-size: 16px;
+    color:grey;
+    margin: 15px 0 20px 0;
+  }
+  
+  .section-p1 {
+    padding: 40px 80px;
+  }
+  
+  .section-m1 {
+    margin: 40px 0;
+  }
+  button.normal{
+   font-size:14px;
+   font-weight:600 ;
+   padding:15px 30px;
+   color: #1a1a1a;
+   background-color: #dbeae5;
+   border-radius: 4px;
+   border:none ;
+   outline: none;
+   transition: 0.2s;
+
+ }
+
+ body {
+   width: 100%;
+ }
+ /*now we are going to aline our headers w nhotouhol fard niveau maa logo*/
+ #header { 
+   display:flex;
+   align-items:center;
+   justify-content:space-between;
+  padding:15px 300px ;
+  text-align: center;
+background: rgb(255, 255, 255) ;
+box-shadow: 0 5px  15px rgba(255, 255, 255, 0.692);
+z-index: 999;
+position:sticky;/*hatitha bsh kif nscrolli tab9a l barra fixe   */
+left: 0;
+top: 0; 
+flex-wrap: wrap;   
+ }
+ #navbar{    /*now we are going to aline our headers w nhotouhol fard starr maa logo*/
+   display:flex;
+   align-items:center ;
+   justify-content:center;
+   
+ }
+ #navbar li {
+ padding: 0 35px;/* espace bin l menu*/
+ position: relative;
+ }
+
+ #navbar li a {
+   font-weight:600px;
+   font-size:20px;
+   color: #020202a4;
+  transition: 0.3s ease; /*transition bin kol menu tkoun smooth msh mazrouba*/
+   }
+
+   #navbar li a:hover,/*faza hethi taamli shadow yaani k nenzl ala mathalan shop loun yetbadl*/
+   #navbar li a.active{   /*twa aamalt appel l classe essmha active lezm nmshi nasnaaha f html bsh nrod kol icon highlited yaani k nodkhl l home tab9a mlawna bl akdher*/   
+       color:#088178;
+       }
+
+  #navbar li a.active ::after ,
+  #navbar li a:hover::after{  /*twa nheb naaml l underline effect yaani kol icone nenzl aliha tkoun msatra */
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+  }
+
+
+      /*partie les cadres w tswr taa page loula */
+        .row2{
+      
+       width:100%;
+       height: 100vh;
+      background-size: cover;
+      background-position: top 100% right 0;
+      padding:0 90px;
+      display: flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content: center;
+      padding-top: 30px;
+      }
+      .col1{
+       flex-basis: 80%;
+      }
+
+      h1{
+       color: #3b8c87;
+      }
+      .card1{
+       width: 350px;
+       height:550px ;
+       display: inline-block;
+       border-radius: 21px 1px;
+       box-sizing: border-box;
+       cursor: pointer;
+       margin: 10px 40px;
+       background-image:url(bershka/4.jpg) ;
+       background-position: center;
+       background-size: cover;
+       justify-content: right;
+      margin-left: 40px;
+      transition:transfom 0.5s;
+      
+      }
+     .card5{
+       background-image: url(bershkaf/thenya.jpg);
+     
+     }
+     .card6{
+       background-image: url(food.jpg);
+
+     }
+     .card7{
+       background-image: url(pc.jpg);
+     }
+     .bershka1 {
+       text-align:center;
+       color: #fffffff9;
+
+      }
+      .card1:hover{
+       transition: translateY(-10px);
+       transition: calc(-10px);
+
+      }
+      #header button{
+         /*
+        background-image:url(Bershka/logo.PNG);
+         /*background: transparent;**/
+         
+         border:0;
+         padding: 14px 80px 14px 65px;
+         background-repeat: no-repeat;
+         cursor:pointer;
+         font-weight: 700;
+         font-size: 15px;
+         background-color: transparent;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+     
+ 
+       }
+/*footer*/
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .col{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin-bottom: 30px;
+}
+footer .col img{
+justify-self: center;
+}
+footer .logo{
+margin-bottom: 40px;
+}
+footer h4{
+font-size: 14;
+padding-bottom: 20px;
+}
+footer p{
+font-size: 13;
+margin: 0 0 8px 0;
+}
+footer a{
+font-size: 13;
+text-decoration: none;
+color: #222;
+margin: 10px;
+}
+footer .follow{
+margin-top: 20px;
+}
+footer .follow i{
+color: #64c6a4;
+padding-right: 4px;
+cursor: pointer;
+}
+footer .install .row img{
+border:1px solid black ;
+border-radius: 6px;
+}
+footer .install img{
+margin:20px 0 15px 0 ;
+
+}
+.active{
+color: #088178;
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> clothes food and everything you need </title>
+    <!--css link-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/><!--to add icons -->
+    <lin rel="shortcut icon" type="x-icon" href="icon1.PNG"></lin>
+</head>
+<body>
+<!--menu section-->
+<section id="header">
+    <div>
+        <ul id="navbar"> <!--navigation bar-->
+
+            <li><a href="home.html" class=" active"> Home</a></li>
+            <!--kol page aandha link l page html bsh nasnaaha baad -->
+            <li><a href="shop.html">SHOP</a></li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="#"><i class="far fa-shopping-bag"></i></a></li>
+        </ul>
+    </div>
+    <!--bsh nasnaa twa kal menu l ali imin-->
+    <div id="mobile">
+
+        <!-- <a href="cart.html"><i class="far fa-shopping-bag"></i></a>-->
+
+        <i id="bar" class="fas fa-outdent"> </i>
+    </div>
+
+</section>
+
+<!--pageloua section-->
+<div class="row1">
+    <div class="col1">
+        <h4>Trade-in-offer </h4>
+        <h2>Super Value Deals </h2>
+        <h1>on all products</h1>
+        <p>Livraison à domicile gratuite pour les commandes comportant au moins 199 TND.</p>
+    </div>
+    <div class="col1" id="brand-list">
+    </div>
+    <script>
+        fetch("https://api-mall.code2bind.com/v1/clothing/brand/")
+            .then(res => res.json())
+            .then(res => {
+                console.log(res)
+                const brand_list = document.getElementById("brand-list")
+                res.results.map(element => {
+                    brand_list.innerHTML += "<div class='card card"+ element.id +"'>" +
+                        "            <h3><a href='clothinglist.html?for=" + element.id + "' class='bershka' " +
+                        "style='background-image: url(" + element.logo + ")'>"+ element.name +"</a></h3>" +
+                        "        </div>"
+                })
+            })
+    </script>
+</div>
+
+
+<!--features section-->
+<section id="product1" class="section-p1"></a>
+    <h2>Feature Products</h2>
+    <p> COLORFUL VIBRANT FOR SPRING BY BERSHKA.COM </p>
+    <div class="pro-container" id="products">
+
+
+        <script>
+            const products = document.getElementById("products")
+            fetch("https://api-mall.code2bind.com/v1/clothing/clothing/?limit=9")
+                .then(res => res.json())
+                .then(data => {
+                    data.results.map(element => {
+                        products.innerHTML += "<div class='pro'>\n" +
+                            "            <img src='" + element.image + "' alt=''>" +
+                            "            <div class='product-text'>" +
+                            "                <h5>New</h5>" +
+                            "            </div>" +
+                            "            <div class='des'>" +
+                            "                <span>" + element.brand_name + "</span>" +
+                            "                <h5>" + element.name + "</h5>" +
+                            "                <div class='star'>" +
+                            "                    <i class='fas fa-star'></i>" +
+                            "                    <i class='fas fa-star'></i>" +
+                            "                    <i class='fas fa-star'></i>" +
+                            "                    <i class='fas fa-star'></i>" +
+                            "                </div>" +
+                            "" +
+                            "                <h4>" + element.price + " TND</h4>" +
+                            "            </div>" +
+                            "            <a href='#'><i class='fal fa-heart heart'></i></a>" +
+                            "        </div>"
+                    })
+                })
+        </script>
+
+    </div>
+</section>
+
+
+<!--solde section-->
+<section id="banner" class=" section-m1">
+    <h4>Repair Services</h4>
+    <h2>MID SEASON SALE JUSQU'À <samp>-50 %</samp>Plus d’articles ajoutés !</h2>
+    <button class="normal">EXPLORE MORE</button>
+
+</section>
+
+<!--pub section-->
+<section id="sm-banner" class="section-p1">
+    <div class="banner-box">
+        <h4>INSIDE Bershka
+            Suivez le mouvement avec nos 4 Global Brand Movers</h4>
+        <button class="white">LEARN MORE</button>
+    </div>
+    <div class="banner-box banner-box2">
+        <h4>Un look romantique tout droit venu de Séoul</h4>
+        <p>La star de la mode coréenne Jung Ju Lee ne jure que par les matières soyeuses et fluides cette saison.</p>
+        <button class="grege">READ THE STORY</button>
+    </div>
+    <div class="banner-box banner-box3">
+        <h4>Garde-robe capsule pour homme</h4>
+        <h4>Une garde-robe capsule est une façon versatile, stylée et durable d'acheter.</h4>
+        <button class="white1">READ THE STORY</button>
+    </div>
+    <div class="banner-box banner-box4 ">
+        <h4>Le design dans le métavers</h4>
+        <h4>TDes pièces spectaculaires pour cette dimension et au-delà..</h4>
+        <button class="white">READ THE STORY</button>
+    </div>
+    <div class="banner-box banner-box5">
+        <h4>H&M Move fait équipe avec Zlatan Ibrahimović</h4>
+        <h4>C'est avec un immense plaisir que H&M Move accueille Zlatan dans son.</h4>
+        <button class="grege">READ THE STORY</button>
+    </div>
+    <div class="banner-box banner-box6">
+        <h4>Imagine That : Innovation Story pour enfant</h4>
+        <p style="color: rgb(244, 244, 249);">Notre nouvelle collection Innovation Story – la toute première proposant
+            une.</p>
+        <button class="amal">READ THE STORY</button>
+    </div>
+
+
+</section>
+
+<!--solde section-->
+<section id="newsletter" clasd="section-p1 section-m1">
+    <div class="newstext">
+        <h2>Obtiens une remise de 10 %</h2>
+        <p>Abonne-toi à notre newsletter pour recevoir une remise de 10 % sur ton prochain achat, un accès à des
+            promotions exclusives et bien plus encore !</p>
+    </div>
+
+    <div class="form">
+        <input type="text" placeholder="Your Email adress">
+        <button class="normal">Sign Up</button>
+
+
+    </div>
+
+</section>
+
+<!--footer section-->
+<footer class="section-p1">
+    <div class="col">
+        <!--
+        <img src="Bershka/logo.PNG">-->
+        <h4>CONTACT</h4>
+        <p style="color:rgba(99, 91, 91, 0.926)"><strong> Bershka:</strong>De lundi à vendredi de 10:00 à 17:00.
+        </p>
+
+        <p style="color:rgba(99, 91, 91, 0.926)"><strong> ZARA:</strong>De lundi à vendredi de 10:00 à 17:00.
+        </p>
+        <p style="color:rgba(99, 91, 91, 0.926)"><strong> PULL&BEAR:</strong>De lundi à vendredi de 10:00 à 17:00.
+        </p>
+        <p style="color:rgba(99, 91, 91, 0.926)"><strong> Adresse:</strong>Kalaat Al Andalous </p>
+
+        <div class="follow">
+            <h4> FOLLOW US</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-pinterest"></i>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col">
+        <h4>About</h4>
+        <a href="#"> About Us</a>
+        <a href="#"> Delivery Information</a>
+        <a href="#"> Privacy Police</a>
+        <a href="#"> Terms & Conditions </a>
+        <a href="#"> Contact Us</a>
+        <p>© 2023 GALAA SHOP</p>
+
+
+    </div>
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#"> Sign In</a>
+        <a href="#"> View Cart</a>
+        <a href="#"> My WishList</a>
+        <a href="#"> Track My Order </a>
+        <a href="#">Help</a>
+
+
+    </div>
+    <div class="col install">
+        <h4>Install</h4>
+        <p> From App Store or Google Play</p>
+        <div class="row">
+            <img src="Bershkaa/app.jpg">
+            <img src="Bershkaa/pl&y.jpg">
+            <p>Secured Payment Gateway</p>
+            <img src="Bershkaa/payyy.png">
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        <p>© 2023 GALAA SHOP</p>
+    </div>
+</footer>
+
+
+<script src="java.js"></script>
+
+
+</body>
+</html>

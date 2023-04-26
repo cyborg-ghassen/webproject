@@ -1,0 +1,59 @@
+bbody {
+  background-color: rgb(253, 245, 245);
+
+  margin: 20px;
+}
+.h {
+  background-color: rgb(43, 47, 106);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.h1 {
+  background-color: red;
+  color: rgb(235, 235, 235);
+  font-style: italic;
+  font-size: 35px;
+  margin: 300px;
+}
+input[type="text"] {
+  width: 500px;
+  height: 40px;
+}
+.cadre {
+  background-color: white;
+  border: 4px solid white;
+  padding: 0px;
+  width: 90%;
+  height: 300px;
+  margin-top: 50px;
+  margin-left: 70px;
+}
+#cadre1 {
+  margin-left: 0px;
+}
+#cadre2 {
+  margin-left: 330px;
+  margin-top: -250px;
+}
+p {
+  font-size: large;
+}
+#cadre3 {
+  margin-left: 1090px;
+  margin-top: -1200px;
+  padding-bottom: 130px;
+}
+#cadre4 {
+  margin-left: 1200px;
+  margin-top: -1200px;
+  padding-bottom: 140px;
+}
+#cadre5 {
+  margin-left: 1080px;
+  margin-top: -1700px;
+  padding-bottom: 80px;
+  width: 200px;
+  height: 70px;
+}

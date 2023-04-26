@@ -1,0 +1,786 @@
+
+@import url( 'https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,800&display=swap');
+
+*{
+margin: 0; /* definir taille sur les 4 cotes */
+padding: 0;/*generate space */
+box-sizing: border-box;
+scroll-behavior: smooth ;
+font-family: 'Jost', sans-serif;
+list-style: none;
+text-decoration: none;
+
+}
+h1{
+
+font-size:50px;
+line-height: 64px;
+color: #1a1a1a;
+
+}
+h2{
+font-size:46px;
+line-height: 54px;
+color: #1a1a1a;
+
+
+}
+h4{
+    font-size:20px;
+  
+    color: #1a1a1a;
+    
+}
+h6{
+    font-weight:700px;
+    font-size:12px;
+  
+}
+p {
+    font-size: 16px;
+    color:grey;
+    margin: 15px 0 20px 0;
+  }
+  
+  .section-p1 {
+    padding: 40px 80px;
+  }
+  
+  .section-m1 {
+    margin: 40px 0;
+  }
+  /*hthy botton mtaa learn more l f ekhr safha*/
+  button.normal{
+    font-size:14px;
+    font-weight:600 ;
+    padding:15px 30px;
+    color: #1a1a1a;
+    background-color: #dbeae5;
+    border-radius: 4px;
+    border:none ;
+    outline: none;
+    transition: 0.2s;
+
+  }
+
+  body {
+    width: 100%;
+  }
+  /*now we are going to aline our headers w nhotouhol fard niveau maa logo*/
+  #header { 
+    display:flex;
+    align-items:baseline ;
+    justify-content:space-between;
+   padding:15px 80px ;
+   text-align: center;
+background: rgb(255, 255, 255) ;
+box-shadow: 0 5px  15px rgba(255, 255, 255, 0.692);
+z-index: 999;
+position:sticky;/*hatitha bsh kif nscrolli tab9a l barra fixe   */
+left: 0;
+top: 0; 
+flex-wrap: wrap;   
+  }
+  #navbar{    /*now we are going to aline our headers w nhotouhol fard starr maa logo*/
+    display:flex;
+    align-items:center ;
+    justify-content:center;
+    
+  }
+  #navbar li {
+  padding: 0 35px;/* espace bin l menu*/
+  position: relative;
+  }
+
+  #navbar li a {
+    font-weight:600px;
+    font-size:20px;
+    color: #020202a4;
+   transition: 0.3s ease; /*transition bin kol menu tkoun smooth msh mazrouba*/
+    }
+
+    #navbar li a:hover,/*faza hethi taamli shadow yaani k nenzl ala mathalan shop loun yetbadl*/
+    #navbar li a.active{   /*twa aamalt appel l classe essmha active lezm nmshi nasnaaha f html bsh nrod kol icon highlited yaani k nodkhl l home tab9a mlawna bl akdher*/   
+        color:#088178;
+        }
+
+   #navbar li a.active ::after ,
+   #navbar li a:hover::after{  /*twa nheb naaml l underline effect yaani kol icone nenzl aliha tkoun msatra */
+   content: "";
+   width: 30%;
+   height: 2px;
+   background: #088178;
+   position: absolute;
+   bottom: -4px;
+   left: 20px;
+   }
+
+
+       
+         .row1{
+       
+        width:100%;
+        height: 100vh;
+       background-size: cover;
+       background-position: top 100% right 0;
+       padding:0 90px;
+       display: flex;
+       flex-direction:row;
+       align-items:start;
+       justify-content: center;
+       padding-top: 50px;
+       }
+       .col1{
+        flex-basis: 50%;
+       }
+
+       h1{
+        color: #3b8c87;
+       }
+       .card{
+        width: 150px;
+        height:400px ;
+        display: inline-block;
+        border-radius: 10px 15px;
+        box-sizing: border-box;
+        cursor: pointer;
+           background-position: center;
+        background-size: cover;
+        justify-content: right;
+           margin: 10px 15px 10px 40px;
+           transition:transfom 0.5s;
+       
+       }
+      .card1{
+        background-image: url(bershkaf/4.jpg);
+      
+      }
+      .card2{
+        background-image: url(zaraf/coover.jpg);
+
+      }
+      .card3{
+        background-image: url(zaraf/cover3.jpg);
+      }
+      .bershka {
+        text-align:center;
+        color: #dfd0d0f9;
+
+       }
+       .card:hover{
+        transition: translateY(-10px);
+        transition: calc(-10px);
+
+       }
+
+
+
+
+
+
+      #header button{
+        /*
+       background-image:url(Bershka/logo.PNG);
+        /*background: transparent;**/
+        
+        border:0;
+        padding: 14px 80px 14px 65px;
+        background-repeat: no-repeat;
+        cursor:pointer;
+        font-weight: 700;
+        font-size: 15px;
+        background-color: transparent;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    
+
+      }
+       /*twa lehin bl product loul */
+       #product1{
+        text-align: center;
+
+       }
+       #product1 .pro-container{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+        flex-wrap: wrap;
+       }
+       /*twa lehin b taswira */
+       #product1 .pro{
+        width:30%;
+        min-width:250px;
+        padding: 8px 8px;
+        /*
+        border: 1px solid #060606;*/
+        cursor: pointer;
+        box-shadow: 20px 20px  30px rgba(0,0,0,0.02);
+        margin: 1px 0;
+        transition: 0.30s ease;
+        position: relative;
+
+    }
+        #product1 .pro:hover{
+     box-shadow: 30px 20px  30px rgba(0,0,0,0.06  );
+     /*transform: scale(0.9);*/
+
+        }
+       #product1 .pro img{
+        width: 250px;
+        border-radius: 20px;
+       }
+       #product1 .pro .des{
+        text-align:center;
+        padding:3px 0;
+
+       }
+     #product1 .pro.span{
+        color:#606063;
+        font-size: 12px;
+     }
+     #product1 .pro .des h5{
+        padding-top:7px;
+        font-size: 14px;
+        color:#1a1a1a
+     }
+     #product1 .pro .des i{
+        font-size: 15px;
+        
+     }
+     #product1 .pro .des h4{
+    padding-top:7px ;
+    font-size:15px ;
+    font-weight: 700px;
+     }
+     #product1 .pro .heart{
+        width:40px ;
+        height: 40px;
+        line-height: 40px;
+        border-radius:50px ;
+        background-color: 500;
+        border: 1px solid #cce7d0;
+        position: absolute;
+        bottom: 20px;
+        right:10px ;
+
+     }
+     #product1 .pro .star{
+      color: rgba(244, 241, 46, 0.967);
+
+     }/*
+     .section-p1 {
+      padding-left: 40px;
+     }*/
+#banner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+
+}
+#banner h2 samp{
+  color: #0e5d47;
+}
+#banner button:hover{
+  background-color: #088178;
+  color: #fff;
+}/*1*/
+#sm-banner .banner-box{
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+ background-image:url(Bershkaa/banner2.jfif) ;
+min-width: 400px;
+height: 50vh;
+background-size: cover;
+background-position:center;
+
+}
+#sm-banner .banner-box h4{
+  color: #ffffffcf;
+}
+#sm-banner{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+
+}
+button.white{
+  font-size:13px;
+  font-weight:600 ;
+  padding:15px 30px;
+  color: #1a1a1a;
+  background-color: #f1deec;
+  border-radius: 4px;
+  border:none ;
+  outline: none;
+  transition: 0.2s;}
+/*
+} #sm-banner button:hover{
+  background-color: #c383ad;
+  color: #fff;
+}*/
+#sm-banner .banner-box:hover button{
+  background-color: #c383ad;
+  color: #fff;
+}
+/*2*/
+#sm-banner .banner-box2{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+ background-image:url(Bershkaa/banner3.jpg) ;
+min-width: 400px;
+height: 50vh;
+background-size: cover;
+background-position: center;
+}
+#sm-banner .banner-box2:hover button{
+  background-color: #d5c293;
+  color: #f1ece3;
+}
+button.grege{
+  font-size:13px;
+  font-weight:600 ;
+  padding:15px 30px;
+  color: #1a1a1a;
+  background-color: #e4d5b9;
+  border-radius: 4px;
+  border:none ;
+  outline: none;
+  transition: 0.2s;}
+/*3*/
+
+
+#sm-banner .banner-box3{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+ background-image:url(Bershkaa/banner5.jfif) ;
+min-width: 400px;
+height: 50vh;
+background-size: cover;
+background-position: center;
+}
+#sm-banner .banner-box3:hover button{
+  background-color: #96988c;
+  color: #f1ece3;
+}
+button.white1{
+  font-size:13px;
+  font-weight:600 ;
+  padding:15px 30px;
+  color: #1a1a1a;
+  background-color: #ede8de;
+  border-radius: 4px;
+  border:none ;
+  outline: none;
+  transition: 0.2s;}
+
+/*4*/
+
+#sm-banner .banner-box5{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+ background-image:url(Bershkaa/bannerzlatan.jfif) ;
+min-width: 400px;
+height: 50vh;
+background-size: cover;
+background-position: center;
+}
+#sm-banner .banner-box5:hover button{
+  background-color: #d5c293;
+  color: #f1ece3;
+}
+button.grege{
+  font-size:13px;
+  font-weight:600 ;
+  padding:15px 30px;
+  color: #1a1a1a;
+  background-color: #e4d5b9;
+  border-radius: 4px;
+  border:none ;
+  outline: none;
+  transition: 0.2s;}
+/**/
+
+  #sm-banner .banner-box4{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   background-image:url(Bershkaa/banner4.jpg) ;
+  min-width: 400px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  }
+  #sm-banner .banner-box5:hover button{
+    background-color: #d5c293;
+    color: #f1ece3;
+  }
+  button.grege{
+    font-size:13px;
+    font-weight:600 ;
+    padding:15px 30px;
+    color: #1a1a1a;
+    background-color: #e4d5b9;
+    border-radius: 4px;
+    border:none ;
+    outline: none;
+    transition: 0.2s;}
+    #sm-banner .banner-box6{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+     background-image:url(Bershkaa/11.jfif) ;
+    min-width: 400px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    }
+    #sm-banner .banner-box6:hover button{
+      background-color: #61cac3;
+      color: #fff;
+    }
+    button.amal{
+      font-size:13px;
+      font-weight:600 ;
+      padding:15px 30px;
+      color: #1a1a1a;
+      background-color: #dbebe7;
+      border-radius: 4px;
+      border:none ;
+      outline: none;
+      transition: 0.2s;}
+    
+
+
+
+
+
+#product1 .product-text h5{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #27b737;
+    padding: 3px 10px;
+    border-radius: 2px;}
+    #section-p1.heart-icon{
+        position: absolute;
+        right: 0;
+        font-size: 20px;
+    }
+    #section-p1 .heart-icon:hover{
+        color: #EE1C47;
+    }
+    #hero .navbar{
+      position:absolute;
+      margin:50px;
+      justify-content: space-between;
+      width: 100%;
+      box-sizing: border-box;
+
+
+    }
+    #hero .navbar a{
+      color:#088178;
+
+    }
+    #hero .navbar .logo1{
+      font-size: 2cm;
+      font-weight: bold;
+
+
+
+    }
+    #hero .navbar .nav-links ul{
+
+  display:flex ;
+  align-items: center ;
+    }
+    /*
+   @media(max-width:799px){
+      #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        right: 0px;
+        height:100vh;
+        width: 300px;
+        background-color: #e3e6f3;
+        box-shadow:0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px ;
+    }
+    #navbar li{
+      margin-bottom: 30px;
+    }
+  }
+  /*create the footer now*/
+  
+  #newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #fffffe;
+    background-position: 20% 30%;
+    margin-left: 70px;
+
+
+  }
+  #newsletter h2{
+    font-size: 40px;
+    font-weight: 1000;
+ 
+    
+  }
+  #newsletter p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+  
+  }
+    #newsletter .form{
+      display: flex;
+      width: 40%;
+      align-self: center;
+      margin-left: 200px;
+    
+
+    } 
+  /*
+  #newsletter input{
+    height: 3.125rem; 
+    padding: 100 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent ;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-left: 40px;
+
+  }/*
+  #newsletter button{
+    background-color: #c8c0c0;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+  }*/
+  footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+footer .col img{
+  justify-self: center;
+}
+footer .logo{
+margin-bottom: 40px;
+}
+footer h4{
+  font-size: 14;
+  padding-bottom: 20px;
+}
+footer p{
+  font-size: 13;
+ margin: 0 0 8px 0;
+}
+footer a{
+  font-size: 13;
+text-decoration: none;
+color: #222;
+margin: 10px;
+}
+footer .follow{
+  margin-top: 20px;
+}
+footer .follow i{
+ color: #64c6a4;
+ padding-right: 4px;
+ cursor: pointer;
+}
+footer .install .row img{
+  border:1px solid black ;
+  border-radius: 6px;
+}
+footer .install img{
+  margin:20px 0 15px 0 ;
+
+}
+.active{
+  color: #088178;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.navbar ul{
+  list-style: none;
+  display: flex;
+
+}*/
+/*
+.navbar ul li {
+  padding: 10px 30px;
+  position: relative;
+}/*
+.navbar ul li a{
+  color: red;
+  text-decoration: none;
+  font-size: 20px ;}
+
+.navbar ul li a:hover{
+  color:red;
+ }
+
+
+
+
+ .navbar ul li:hover .dropdown_menu{
+  display: block;
+  position: absolute;  
+ left: 0 ;
+ top: 100%;
+ background-color: red;
+ 
+
+}
+.navbar ul li:hover .dropdown_menu ul  {
+margin: 10px;
+display: block;
+}
+.navbar ul li:hover .dropdown_menu ul li{
+  width: 20px;
+padding: 15px;
+}
+.fas{
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+.navbar .dropdown_menu{
+  display: block;
+}
+*/ /*
+.dropdown_menu{
+  display: none;
+
+}
+.navbar ul li:hover .dropdown_menu{
+  display: block;
+  position: absolute;  
+ left: 0 ;
+ top: 100%;
+ background-color: red;
+ 
+
+}
+.dropdown_menu ul{
+display: block;
+margin: 10px;
+}
+.dropdown_menu ul li{
+  width: 20px;
+padding: 15px;
+}
+.fas{
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+
+/*single product*/
+#prodetails .single-pro-image{
+  width: 22%;
+  margin-right: 100px;
+
+}
+.small-img-group{
+  display: flex;
+  justify-content: space-between;
+}
+.small-img-col{
+  flex-basis: 20%;
+  cursor: pointer;
+}
+#prodetails{
+
+  display: flex;
+  margin-top: 20px;
+}
+#prodetails .single-pro-details{
+  width: 50%;
+  padding-top: 30px;
+
+}
+#prodetails .single-pro-details h4{
+    padding: 40px 0 20px 0;
+}
+#prodetails .single-pro-details h2{
+  font-size: 26px;
+ 
+}
+#prodetails .single-pro-details select{
+   display: block;
+   padding: 5px 10px;
+   margin-bottom: 10px;
+
+}
+#prodetails .single-pro-details input{
+width: 50px;
+height: 47px;
+padding-left: 18px;
+font-size: 16px;
+margin-right: 10px;
+}
+#prodetails .single-pro-details button{
+  color: #ffffff;
+  background-color: #42d386;
+
+}
+#prodetails .single-pro-details span{
+  line-height: 20px;
+}
