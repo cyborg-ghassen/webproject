@@ -65,90 +65,160 @@ p {
 
   body {
     width: 100%;
+    background-color: #fff8f8
   }
   /*now we are going to aline our headers w nhotouhol fard niveau maa logo*/
-  #header { 
-    display:flex;
-    align-items:baseline ;
-    justify-content:space-between;
-   padding:15px 80px ;
-   text-align: center;
-background: rgb(255, 255, 255) ;
-box-shadow: 0 5px  15px rgba(255, 255, 255, 0.692);
-z-index: 999;
-position:sticky;/*hatitha bsh kif nscrolli tab9a l barra fixe   */
-left: 0;
-top: 0; 
-flex-wrap: wrap;   
+  .nav{
+    background-color:#ffffff;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:centre;
+  padding:30px 0;
+  
   }
-  #navbar{    /*now we are going to aline our headers w nhotouhol fard starr maa logo*/
+  .nav .logo h1{
+    font-weight:800;
+    font-family:sans-serif;
+    color:#e67eb5;
+  }
+  .nav .logo b{
+    
+    color:#d85295;;
+  }
+  
+  .nav ul{
+    
     display:flex;
-    align-items:center ;
-    justify-content:center;
+    list-style:none;
     
   }
-  #navbar li {
-  padding: 0 35px;/* espace bin l menu*/
-  position: relative;
+  .nav ul li{
+  margin-right:50px;}
+  .nav ul li a{
+    text-decoration:none;
+    color:#000000;
+    font-weight:500;
+    font-family:sans-serif;
+    font-size:17px;
   }
+  .nav ul li a:hover{
+    color:#db1e7c;;
+  }
+  .nav ul .active::after{
+    
+    content:"";
+    width:50%;
+    height:3px;
+    background-color:black;
+    display:flex;
+    position:relative;
+    margin-left:10px;
+  }
+  input{
+    padding:10px 20px;
+    cursor:pointer;
+    font-weight:600;
+  }
+  .signin{
+    background:transparent;
+  border:none;}
+  .signup{
+  background-color:#db1e7c;
+    color:#ffffff;
+    outline:none;
+    border:none;
+  border-radius:5px;}
+/*search bar*/
+.menu{
+	padding:0 10px 30px 10px;
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+	grid-gap:30px 50px;
+}
 
-  #navbar li a {
-    font-weight:600px;
-    font-size:20px;
-    color: #020202a4;
-   transition: 0.3s ease; /*transition bin kol menu tkoun smooth msh mazrouba*/
-    }
+.search-box
+{
+	
+	position:absolute;
+	top:17%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	background:#6c6c6c;
+    border-radius:40px;
 
-    #navbar li a:hover,/*faza hethi taamli shadow yaani k nenzl ala mathalan shop loun yetbadl*/
-    #navbar li a.active{   /*twa aamalt appel l classe essmha active lezm nmshi nasnaaha f html bsh nrod kol icon highlited yaani k nodkhl l home tab9a mlawna bl akdher*/   
-        color:#088178;
-        }
+	height:40px;
+    padding:10px;
+	
+}
+.search-box:hover > .search-btn{
+	color:#000;
+}
+.search-box:hover > .search-txt{
+	width:240px;
+	padding:0 6px;
+}
+.search-btn{
+	color:#0c0c0c;
+	float:right;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	background:white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
 
-   #navbar li a.active ::after ,
-   #navbar li a:hover::after{  /*twa nheb naaml l underline effect yaani kol icone nenzl aliha tkoun msatra */
-   content: "";
-   width: 30%;
-   height: 2px;
-   background: #088178;
-   position: absolute;
-   bottom: -4px;
-   left: 20px;
-   }
 
+.search-txt {
+	border:none;
+	background:none;
+	outline:none;
+	float:left;
+	padding:0;
+	color:white;
+	font-size:16px;
+	transition:0.4s;
+	width:0px;
+	line-height:40px;
+}
 
        
          .row1{
        
-        width:100%;
-        height: 100vh;
-       background-size: cover;
-       background-position: top 100% right 0;
-       padding:0 90px;
-       display: flex;
-       flex-direction:row;
-       align-items:start;
-       justify-content: center;
-       padding-top: 50px;
+          width:100%;
+          height: 100vh;
+         background-size: cover;
+         background-position: top 100% right 0;
+         padding:0 90px;
+         display: flex;
+         flex-direction:column;
+         align-items:center;
+         justify-content: center;
+         padding-top: 30px;
        }
        .col1{
-        flex-basis: 50%;
+        flex-basis: 80%; 
        }
 
        h1{
         color: #3b8c87;
        }
        .card{
-        width: 150px;
-        height:400px ;
+        width: 350px;
+        height:550px ;
         display: inline-block;
-        border-radius: 10px 15px;
+        border-radius: 21px 1px;
         box-sizing: border-box;
         cursor: pointer;
-           background-position: center;
+        margin: 10px 40px;
+        background-image:url(bershka/4.jpg) ;
+        background-position: center;
         background-size: cover;
         justify-content: right;
-           margin: 10px 15px 10px 40px;
-           transition:transfom 0.5s;
+       margin-left: 40px;
+       transition: 0.5s;
        
        }
       .card1{
@@ -164,19 +234,16 @@ flex-wrap: wrap;
       }
       .bershka {
         text-align:center;
-        color: #dfd0d0f9;
-
+        color: #2d2b2bf9;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
        }
        .card:hover{
-        transition: translateY(-10px);
-        transition: calc(-10px);
-
+        transform: scale(1.3);
+        z-index: 2;
        }
-
-
-
-
-
+     
 
       #header button{
         /*
@@ -205,6 +272,7 @@ flex-wrap: wrap;
         display: flex;
         justify-content: space-between;
         padding-top: 40px;
+       
         flex-wrap: wrap;
        }
        /*twa lehin b taswira */
@@ -217,7 +285,7 @@ flex-wrap: wrap;
         cursor: pointer;
         box-shadow: 20px 20px  30px rgba(0,0,0,0.02);
         margin: 1px 0;
-        transition: 0.30s ease;
+        transition: 0.30 ease;
         position: relative;
 
     }
@@ -555,14 +623,14 @@ button.grege{
   #newsletter h2{
     font-size: 40px;
     font-weight: 1000;
- 
+ align-items: center;
     
   }
   #newsletter p{
     font-size: 14px;
     font-weight: 600;
     color: #818ea0;
-  
+  align-items: center;
   }
     #newsletter .form{
       display: flex;
@@ -570,38 +638,19 @@ button.grege{
       align-self: center;
       margin-left: 200px;
     
-
+align-items: center;
     } 
-  /*
-  #newsletter input{
-    height: 3.125rem; 
-    padding: 100 1.25em;
-    font-size: 14px;
-    width: 100%;
-    border: 1px solid transparent ;
-    border-radius: 4px;
-    outline: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    padding-left: 40px;
-
-  }/*
-  #newsletter button{
-    background-color: #c8c0c0;
-    white-space: nowrap;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-
-  }*/
+/*footer editing*/
   footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-color: #e5e5e5;
 }
 footer .col{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items:center;
   margin-bottom: 30px;
 }
 footer .col img{
@@ -616,20 +665,20 @@ footer h4{
 }
 footer p{
   font-size: 13;
- margin: 0 0 8px 0;
+ margin: 0 0 0 0;
 }
 footer a{
-  font-size: 13;
+  font-size: 1;
 text-decoration: none;
-color: #222;
+color: #3f3f3f;
 margin: 10px;
 }
 footer .follow{
   margin-top: 20px;
 }
 footer .follow i{
- color: #64c6a4;
- padding-right: 4px;
+ color: #0e0e0e;
+ padding-right: 30px;
  cursor: pointer;
 }
 footer .install .row img{
@@ -784,3 +833,6 @@ margin-right: 10px;
 #prodetails .single-pro-details span{
   line-height: 20px;
 }
+
+
+

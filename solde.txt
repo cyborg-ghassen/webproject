@@ -1,0 +1,64 @@
+<!--solde section-->
+<section  id="banner" class=" section-m1"  >
+    <h4>Repair Services</h4>
+    <h2>MID SEASON SALE JUSQU'À <samp>-50 %</samp>Plus d’articles ajoutés !</h2>
+  <button class="normal">EXPLORE MORE</button>
+
+</section>
+
+<!--pub section-->
+<section id="sm-banner" class="section-p1"     >
+<div class="banner-box"  >
+<h4>INSIDE Bershka
+    Suivez le mouvement avec nos 4 Global Brand Movers</h4>
+    <button class="white">LEARN MORE</button>
+</div>
+<div class="banner-box banner-box2" >
+    <h4>Un look romantique tout droit venu de Séoul</h4>
+    <p>La star de la mode coréenne Jung Ju Lee ne jure que par les matières soyeuses et fluides cette saison.</p>
+        <button class="grege">READ THE STORY </button>
+    </div>
+    <div class="banner-box banner-box3" >
+        <h4>Garde-robe capsule pour homme</h4>
+           <h4>Une garde-robe capsule est une façon versatile, stylée et durable d'acheter.</h4> 
+            <button class="white1">READ THE STORY </button>
+        </div>
+        <div class="banner-box banner-box4 "  >
+            <h4>Le design dans le métavers</h4>
+               <h4>TDes pièces spectaculaires pour cette dimension et au-delà..</h4>
+                <button class="white">READ THE STORY </button>
+            </div>
+           <div class="banner-box banner-box5"  >
+                <h4>H&M Move fait équipe avec Zlatan Ibrahimović</h4>
+                   <h4>C'est avec un immense plaisir que H&M Move accueille Zlatan dans son.</h4> 
+                    <button class="grege">READ THE STORY </button>
+                </div>
+                <div class="banner-box banner-box6"  >
+                    <h4>Imagine That : Innovation Story pour enfant</h4>
+                       <p style="color: rgb(244, 244, 249);">Notre nouvelle collection Innovation Story – la toute première proposant une.</p> 
+                        <button class="amal">READ THE STORY </button>
+                    </div>
+                    
+    
+                
+
+
+       
+  </section>
+
+ <!--solde section--> 
+    <section id="newsletter"   clasd="section-p1 section-m1" >
+        <div class="newstext">
+            <h2>Obtiens une remise de 10 %</h2>
+            <p>Abonne-toi à notre newsletter pour recevoir une remise de 10 % sur ton prochain achat, un accès à des promotions exclusives et bien plus encore !</p>
+        </div>
+      
+    <div  class="form">
+        <input type="text" placeholder="Your Email adress">
+        <button class="normal">Sign Up</button>
+
+
+
+    </div>
+
+</section>

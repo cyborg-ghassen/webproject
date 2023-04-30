@@ -1,0 +1,84 @@
+body {
+  background-color: white;
+
+  margin: 20px;
+}
+.h {
+  background-color: #cce5ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.h1 {
+  background-color: #cce5ff;
+  color: black;
+  font-style: italic;
+  font-size: 35px;
+  margin: 300px;
+}
+input[type="text"] {
+  width: 500px;
+  height: 40px;
+}
+.b {
+  font-style: italic;
+  margin-left: 70px;
+  padding: 0px;
+  background-color: white;
+}
+/*footer*/
+/*footer editing*/
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #cce5ff;
+}
+footer .col{
+display: flex;
+flex-direction: column;
+align-items:center;
+margin-bottom: 30px;
+}
+footer .col img{
+justify-self: center;
+}
+footer .logo{
+margin-bottom: 40px;
+}
+footer h4{
+font-size: 14;
+padding-bottom: 20px;
+}
+footer p{
+font-size: 13;
+margin: 0 0 0 0;
+}
+footer a{
+font-size: 1;
+text-decoration: none;
+color: #222;
+margin: 10px;
+}
+footer .follow{
+margin-top: 20px;
+}
+footer .follow i{
+color: #0e0e0e;
+padding-right: 30px;
+cursor: pointer;
+}
+footer .install .row img{
+border:1px solid black ;
+border-radius: 6px;
+}
+footer .install img{
+margin:20px 0 15px 0 ;
+
+}
+
+.active{
+color: #088178;
+}
+
