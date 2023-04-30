@@ -5,138 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> clothes food and everything you need </title>
-      <!--css link-->
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" /><!--to add icons -->
-      <lin rel="shortcut icon" type="x-icon" href="icon1.PNG"></lin>
+    <!--css link-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/><!--to add icons -->
+    <lin rel="shortcut icon" type="x-icon" href="icon1.PNG"></lin>
 </head>
 <body>
-   <!--menu section--> 
-   <section class="menu">
+<!--menu section-->
+<section class="menu">
     <div class="nav">
-       <div class="logo"><h2>Mini<b>Mall</b></h2></div>
-       <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="web_food/foodforyou/signin.html">Sign In</a></li>
-          <li><a href="web_food/foodforyou/contact.html">Contact us</a></li>
-          </ul>
-          <div>
-          
-          
-          <input class="signup" type="submit" value="Connection" name="Connection">
-          </div>
-  </div>
-  </section>
-  <section>
+        <div class="logo"><h2>Mini<b>Mall</b></h2></div>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="web_food/foodforyou/signin.html">Sign In</a></li>
+            <li><a href="web_food/foodforyou/contact.html">Contact us</a></li>
+        </ul>
+        <div>
+
+
+            <input class="signup" type="submit" value="Connection" name="Connection">
+        </div>
+    </div>
+</section>
+<section>
     <div class="search-box">
-    
-    <input class="search-txt" type=text name="" placeholder="Search">
-    <a class="search-btn" href="#">
-    <i class="fas fa-search"></i>
-    </a>
+
+        <input class="search-txt" type=text name="" placeholder="Search">
+        <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+        </a>
     </div>
-    </section>
-   
-  
-    
-
- 
-<!--pageloua section--> 
-<div class="row1">  
-  
-    <div class="col1">
-        <div class="card card1">
-            <h2><a href="bershka1.html" class="bershka">BERSHKA</a></h2>
+</section>
 
 
-        </div>
-        <div class="card card2">
-            <h2><a href="zara1.html" class="bershka">ZARA</a></h2>
+<!--pageloua section-->
+<div class="row1">
 
+    <div class="col1" id="brands">
 
-        </div>
-        <div class="card card3">
-            <h2><a href="pullndbear1.html" class="bershka"> PULL&BEAR</a></h2>
-
-
-        </div>
-       
     </div>
-</div> 
+</div>
 
+<script>
+    const brands = document.getElementById("brands")
+    fetch("https://api-mall.code2bind.com/v1/clothing/brand/")
+    .then(res => res.json())
+    .then(element => {
+        element.results.map((item) => (
+            brands.innerHTML += "<div class='card card" + item.id + "'>" +
+                "            <h2><a href='chooser.html?brandId=" + item.id + "' class='bershka'>" + item.name + "</a></h2>\n" +
+                "\n" +
+                "\n" +
+                "        </div>"
+        ))
+    })
+</script>
 
-
-
-
-
-
-
-
-<!--footer section--> 
-<footer class="section-p1"              >
-    <div   class="col"         >
+<!--footer section-->
+<footer class="section-p1">
+    <div class="col">
         <!--
         <img src="Bershka/logo.PNG">-->
-    
-
 
 
     </div>
-    <div  class="col"   >
+    <div class="col">
         <h4>About</h4>
         <a href="#"> Delivery Information</a>
-        <a href="#">    Privacy Police</a>
+        <a href="#"> Privacy Police</a>
         <a href="#"> Terms & Conditions </a>
-        
-        
 
 
     </div>
-    <div  class="col"   >
+    <div class="col">
         <h4>My Account</h4>
         <a href="#"> Sign In</a>
         <a href="#"> View Cart</a>
         <a href="#">Help</a>
-      
-        
 
 
     </div>
- <div  class="col install"         >
-    <h4>Install</h4>
-   
-<div class="row"    >
-    <img src="Bershkaa/app.jpg">
-    <img src="Bershkaa/pl&y.jpg">
-    <p>Secured Payment Gateway</p>
-    <img src="Bershkaa/payyy.png">
-    <p>© 2023 GALAA SHOP</p>
-</div>
+    <div class="col install">
+        <h4>Install</h4>
 
- </div>
- <div  class="follow"      > 
-    <h4> FOLLOW US</h4>
-    <div  class="icon"        >
-    <i  class="fab fa-facebook-f"></i>
-    <i  class="fab fa-instagram"></i>
-    <i  class="fab fa-twitter"></i>
-    <i  class="fab fa-youtube"></i>
-    <i  class="fab fa-pinterest"></i>
-    
+        <div class="row">
+            <img src="Bershkaa/app.jpg">
+            <img src="Bershkaa/pl&y.jpg">
+            <p>Secured Payment Gateway</p>
+            <img src="Bershkaa/payyy.png">
+            <p>© 2023 GALAA SHOP</p>
+        </div>
 
     </div>
-</div>
+    <div class="follow">
+        <h4> FOLLOW US</h4>
+        <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-pinterest"></i>
+
+
+        </div>
+    </div>
 </footer>
- 
+
 <script src="java.js"></script>
-
-
-
-
-
-
-
 
 
 </body>

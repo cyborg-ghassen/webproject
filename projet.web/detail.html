@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="ordinateur.css">
+</head>
+<body>
+<div class="h" style="margin: 0px;">
+    <h4 class="h1">mytek</h4>
+    <form>
+        <input
+                type="text"
+                list="suggestions"
+                placeholder="parcourez le magasin entier ici ..."
+        />
+        <datalist id="suggestions">
+            <option value="ORDINATEUR"></option>
+            <option value="GAMING"></option>
+            <option value="TELEPHONE"></option>
+            <option value="PERIPHERIQUE ET ACCESOIRES"></option>
+            <option value="CLAVIER"></option>
+            <option value="SOURIS"></option>
+            <option value="TAPIS"></option>
+            <option value="IMPRIMANTE"></option>
+            <option value="KIT"></option>
+            <option value="ROUTEUR"></option>
+            <option value="CARTE GRAPHIQUE"></option>
+            <option value="CASQUE"></option>
+        </datalist>
+    </form>
+    <img src="p30.jpg" width="40px" height="50px" bgcolor="white"/>
+    <h4 class="h1">bienvenue</h4>
+</div>
+<div class="h2" style="font-style: italic;
+      margin-left: 180px;
+      background-color: white;">
+    <a href="projet.html">
+        <BUtton style="width: 200px; height: 50px;">ACCUEIL</BUtton>
+    </a>
+    <a href="detail.html?category=1">
+        <button style="width: 200px;height: 50px;">ORDINATEUR</button>
+    </a>
+    <a href="detail.html?category=3">
+        <button style="width:200px;height: 50px;">TELEPHONE</button>
+    </a>
+    <a href="detail.html?category=2">
+        <button style="width: 250px;height: 50px;">PERIPHERIQUE ET ACCESOIRES</button>
+    </a>
+    <a href="contact.html">
+        <button style="width: 200px; height: 50px">NOS CONTACTES</button>
+    </a>
+</div>
+<div id="list">
+
+</div>
+<script>
+    const items = document.getElementById("list")
+    let query = new URLSearchParams(location.search)
+    const category = query.get("category")
+    fetch(`https://api-mall.code2bind.com/v1/electronic/item/?category=${category}`)
+        .then(res => res.json())
+        .then(data => {
+            data.results.map(item => (
+                items.innerHTML += "<div class=\"cadre\">\n" +
+                    "      <pre>\n" +
+                    "        <img id=\"cadre1\" src='" + item.image + "' width=\"300px\" height=\"300px\"> \n" +
+                    "          <p id=\"cadre2\">            " + item.name + "            <span\n" +
+                    "                  style=\"color: red;font-size: xx-large;\"><b>" + item.price + " DT</b></span>\n" +
+                    "        " + item.description + "</p></pre>\n" +
+                    "\n" +
+                    "        <img id=\"cadre4\" src=\"p39.jpg\" width=\"100px\" height=\"70px\"/>\n" +
+                    "        <img id=\"cadre5\" src=\"p42.jpg\"/>\n" +
+                    "    </div>"
+            ))
+        })
+</script>
+</body>
+</html>
