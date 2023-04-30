@@ -44,8 +44,8 @@
 
 
 <!--1-->
-<section  class="section-p1 pro-container" id="product1">
-
+<section  class="section-p1 pro-container" id="product1" >
+    <div class="pro-container" id="products" ></div>
 </section>
 <footer class="section-p1">
     <div class="col">
@@ -114,7 +114,7 @@
 </footer>
 <script src="java.js"></script>
 <script>
-    const products = document.getElementById("product1")
+    const products = document.getElementById("products")
     const urlParams = new URLSearchParams(window.location.search);
     const brandId = urlParams.get('for');
     fetch(`https://api-mall.code2bind.com/v1/clothing/clothing/?brand=${brandId}`)

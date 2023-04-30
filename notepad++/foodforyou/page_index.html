@@ -1,144 +1,83 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Language" content="fr">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>New Page 1</title>
-<link  rel="stylesheet" href="style-index.css">
-<script src="https://kit.fontawesome.com/1bf4227eca.js" crossorigin="anonymous">
+    <meta http-equiv="Content-Language" content="fr">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>New Page 1</title>
+    <link rel="stylesheet" href="style-index.css">
+    <script src="https://kit.fontawesome.com/1bf4227eca.js" crossorigin="anonymous">
 
-</script>
+    </script>
 </head>
 
 <body>
 <section class="menu">
-  <div class="nav">
-     <div class="logo"><h1>food<b>for you</b></h1></div>
-	 <ul>
-	    <li><a class="active" href="C:\Users\inesb\OneDrive\Bureau\webproject\index.html">Home</a></li>
-	    <li><a href="C:\Users\inesb\OneDrive\Bureau\webproject\\projet - Copie/contacte.html">Contacts</a></li>
-	    <li><a href="#">Service</a></li>
-		</ul>
-		<div>
-		
-		<input class="signin" type="submit" value="signin" name="singnin">
-		<input class="signup" type="submit" value="signup" name="singnup">
+    <div class="nav">
+        <div class="logo"><h1>food<b>for you</b></h1></div>
+        <ul>
+            <li><a class="active" href="C:\Users\inesb\OneDrive\Bureau\webproject\index.html">Home</a></li>
+            <li><a href="C:\Users\inesb\OneDrive\Bureau\webproject\\projet - Copie/contacte.html">Contacts</a></li>
+            <li><a href="#">Service</a></li>
+        </ul>
+        <div>
+
+            <input class="signin" type="submit" value="signin" name="singnin">
+            <input class="signup" type="submit" value="signup" name="singnup">
         </div>
-</div>
+    </div>
 </section>
 
 <section>
-<div class="search-box">
+    <div class="search-box">
 
-<input class="search-txt" type=text name="" placeholder="Search">
-<a class="search-btn" href="#">
-<i class="fas fa-search"></i>
-</a>
-</div>
+        <input class="search-txt" type=text name="" placeholder="Search">
+        <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+        </a>
+    </div>
 </section>
-<div class="menu">
+<div class="menu" id="restaurants">
 
-	 <div class="food-items">
-	   <img src="food/1.gif">
-	    <div class="details">
-		     <div class="details-sub">
-			    <h5> Le reservoir Bistro <i class="fa fa-heart checked"></i></h5>
-			 </div>
-			
-			<button><a href="chilis.html" class="button">show menu </a></button>
-			
-		</div>
-	
-	 
-	 </div>
-	 <div class="food-items">
-	   <img src="food/k.png">
-	    <div class="details">
-		     <div class="details-sub">
-			   <h5>kfc <i class="fa fa-heart checked"></i></h5> 
-			 </div>
-<button><a href="kfc.html" class="button">show menu </a></button>
-			
-			
-		</div>
-	
-	 
-	 </div>
-	 <div class="food-items">
-	   <img src="food/ajHrkqeGvr6NF3eZSs3f.png">
-	    <div class="details">
-		     <div class="details-sub">
-			    <h5>Baguette et baguette <i class="fa fa-heart checked"></i></h5>
-			 </div>
-			
-			<button><a href="baguette.html" class="button">show menu </a></button>
-
-		</div>
-	
-	 
-	 </div>
-	 <div class="food-items">
-	   <img src="food/gr.jpg">
-	    <div class="details">
-		     <div class="details-sub">
-			    <h5>Gourmandise  <i class="fa fa-heart checked"></i></h5>
-			 </div>
-			
-			<button><a href="gourmandise.html" class="button">show menu </a></button>
-	</div>
-	
-	 
-	 </div>
-	 <div class="food-items">
-	   <img src="food/brioche.png">
-	    <div class="details">
-		     <div class="details-sub">
-			    <h5>Brioche   <i class="fa fa-heart  checked"></i></h5>
-				
-			 </div>
-			<button><a href="brioche.html" class="button">show menu </a></button>
-	</div>
-	
-	 
-	 </div>
-	 <div class="food-items">
-	   <img src="food/gSD0adYx3iaXGPJi75MI.png">
-	    <div class="details">
-		     <div class="details-sub">
-			    <h5>Ettounsi <i class="fa fa-heart checked"></i></h5>
-				
-			 </div>
-			
-            <button><a href="ettounsi.html" class="button">show menu </a></button>
-
-			</div>
-	
-	 
-	 </div>
-	 
-	 
-	 </div>
-
+</div>
+<script>
+	const restaurants = document.getElementById("restaurants")
+	fetch("https://api-mall.code2bind.com/v1/restaurant/restaurant/")
+	.then(res => res.json())
+	.then(data => {
+		data.results.map(item => (
+				restaurants.innerHTML += "" +
+						"<div class='food-items'>" +
+						"        <img src='" + item.logo + "'>" +
+						"        <div class='details'>" +
+						"            <div class='details-sub'>" +
+						"                <h5> " + item.name + " <i class='fa fa-heart checked'></i></h5>" +
+						"            </div>" +
+						"            <button><a href='" + item.slug + ".html?restaurantID=" + item.id + "' class='button'>show menu </a></button>" +
+						"        </div>" +
+						"    </div>"
+		))
+	})
+</script>
 <p align="center"><b><font size="5" color="black">CHOOSE YOUR RESTAURANT</font></b></p>
 <p align="center"><font size="5" color="#FF5050"><b>&nbsp;&nbsp;&nbsp;&nbsp; </b>
 </font></p>
 <section class="grid">
-  <div class="content">
-     <div class="content-left">
-	        <div class="info">
-			   <h6>Order Your Best  <br>Food anytime</h6>
-			      <p>  Our delicious food is waiting for you </p>
-			   </div>
+    <div class="content">
+        <div class="content-left">
+            <div class="info">
+                <h6>Order Your Best <br>Food anytime</h6>
+                <p> Our delicious food is waiting for you </p>
+            </div>
 
-			   <button>ORDER NOW</button>
-			   			   </div>
+            <button>ORDER NOW</button>
+        </div>
 
-	      <div class="content-right">
-		  <img src="food/89.png"   alt="">
-		  </div>
+        <div class="content-right">
+            <img src="food/89.png" alt="">
+        </div>
 
-  </div>
-<p align="center"><font size="6" color="#FF5050"><b>&nbsp;&nbsp;&nbsp;&nbsp; </b>
+    </div>
+    <p align="center"><font size="6" color="#FF5050"><b>&nbsp;&nbsp;&nbsp;&nbsp; </b>
 
 </section>
 
